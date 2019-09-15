@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Practical Mobile Program</string>
+    <string name="image">image</string>
+    <string name="nama">Name</string>
+    <string name="nilai">Value</string>
+    <string name="my_profil">Mobile Program</string>
+    <string name="nanda_adisaputra">Nanda Adisaputra</string>
+    <string name="colon">:</string>
+    <string name="alamat">Address</string>
+    <string name="kp_jempono_rt_01_rw_01_bangetayu_kulon">Kp.Jempono RT 01 RW 01,Bangetayu Kulon</string>
+    <string name="semester">Semester</string>
+    <string name="_5_lima">5 (five)</string>
+    <string name="motivasi_belajar_mobile_program">Mobile Learning Motivation Program</string>
+    <string name="untuk_menjadi_android_developer_profesional_tersertifikasi_aad_google">To become a Google AAD certified Professional Android Developer</string>
+    <string name="kedua">Second</string>
+    <string name="untuk_dapat_berbagi_pengalaman_development_android_ke_komunitas_smk_coding_dan_masyarakat_melalui_monthly_training">To be able to share android development experience to the Community, Coding Vocational School, and the Community through Monthly Training</string>
+    <string name="ketiga">Third</string>
+    <string name="persiapan_kompetisi_kp_dan_ta_di_bidang_android_development">Competition Preparation, KP, and TA in the field of Android Development</string>
+    <string name="cita_cita">Ambition</string>
+    <string name="menjadi_google_developer_expert_for_android">Become a Google Developer Expert for Android</string>
+    <string name="lihat_harapan_nilai">See Expectations of Value</string>
+    <string name="pertama">First</string>
+    <string name="nilai_yang_diharapkan">Expected Value</string>
+    <string name="saya_berharap_nilai_yang_sesuai_kemampuan_saya_karena_skill_dan_kemampuan_lebih_utama_daripada_nilai">I Hope the Value Is in Accordance with My Ability to Be Accountable in the World of Work, Because Skills and Capabilities Are More Prior to Value</string>
+    <string name="trainer_android_komunitas_semarang_android_developer_sandec">Android Developer Trainer in Semarang Android Developer Community(SANDEC)</string>
+    <string name="lihat_profil_saya">Look at my profile</string>
+    <string name="button">button</string>
+    <string name="pengalaman">Experience</string>
+    <string name="_6_desember_2018">December 6, 2018</string>
+    <string name="finalist_12_besar_nasional_csic_umn_tangerang">Final 12 National CSIC UMN, Tangerang of 50 Teams</string>
+    <string name="_9_10_februari_2019">February 9 - 10 2019</string>
+    <string name="hackathon_hack_of_thrones_tokopedia_jakarta">30 Great National Hackathon Hack Of Thrones, Tokopedia Jakarta from 350 Teams</string>
+    <string name="_18_juni_2019">June 18, 2019</string>
+    <string name="sertifikasi_mobile_developer_intermediate_ikitas_tegal">IKITAS Junior Mobile Developer Intermediate Certification, Tegal</string>
+    <string name="lihat_portofolio">See Portofolio</string>
+    <string name="Nilai">Value</string>
+    <string name="Portofolio">Portofolio</string>
+    <string name="change_language_settings">change_language_settings</string>
+    <string name="home">Home</string>
+    <string name="portofolio">Portofolio</string>
+    <string name="logout">Logout</string>
+    <string name="Profil">Profil</string>
+    <string name="kali">x</string>
+    <string name="bagi">/</string>
+    <string name="result">result</string>
+    <string name="perhitungan">Perhitungan</string>
+    <string name="angka_1">Angka 1</string>
+    <string name="angka_2">Angka 2</string>
+    <string name="tambah">+</string>
+    <string name="kurang">-</string>
+    <string name="jajar_genjang">Jajar Genjang</string>
+    <string name="trapesium">Trapesium</string>
+    <string name="segitiga">Segitiga</string>
+    <string name="persegi">Persegi</string>
+    <string name="angka_3">angka 3</string>
+    <string name="save">save</string>
+    <string name="bangun_datar">Bangun Datar</string>
+    <string name="harga_satuan">Harga Satuan</string>
+    <string name="hasil">Hasil</string>
+    <string name="bayar">Bayar</string>
+    <string name="kembalian">Kembalian</string>
+    <string name="total_harga">Total Harga</string>
+    <string name="form_penjualan">Form Penjualan</string>
+    <string name="nama_barang">Nama barang</string>
+    <string name="jumlah_barang">Jumlah barang</string>
+    <string name="masukkan_nama_barang">Masukkan Nama Barang</string>
+    <string name="masukkan_jumlah_barang">Masukkan Jumlah Barang</string>
+    <string name="masukkan_harga_satuan">Masukkan Harga Satuan</string>
+    <string name="masukkan_bayar">Masukkan Bayar</string>
+    <string name="masukkan_kembalian">Masukkan Kembalian</string>
+    <string name="if_else">If Else</string>
+    <string name="google_map">Google Map</string>
+    <string name="crud">Crud</string>
+    <string name="dan_masih_banyak_lagi_yang_belum_dicantumkan">Dan Masih Banyak lagi yang belum dicantumkan</string>
+    <string name="nama_sertifikat">Nama Sertifikat</string>
+    <string name="lihat_cv_saya">Lihat CV Saya</string>
+    <string name="go_to_kalkulator">Go to Kalkulator</string>
+    <array name="data_gambar">
+        <item>@drawable/sertifikatandroidpemula</item>
+        <item>@drawable/sertifikatkotlin</item>
+        <item>@drawable/sertifikatgapuradigital</item>
+        <item>@drawable/sertifikathackathon</item>
+        <item>@drawable/csic</item>
+        <item>@drawable/web</item>
+        <item>@drawable/arsitektur</item>
+        <item>@drawable/jetpackclass</item>
+        <item>@drawable/kehadiran1</item>
+        <item>@drawable/flutterclass</item>
+    </array>
+    <string-array name="data_judul">
+        <item>Sertifikat Kelulusan Android Pemula</item>
+        <item>Sertifikat Kelulusan Belajar Kotlin Fundamental</item>
+        <item>Sertifikat Pelatihan Gapura Digital</item>
+        <item>Sertifikat Hackathon Tokopedia</item>
+        <item>Sertifikat Finalist CSIC UMN Tangerang</item>
+        <item>Sertifikat Kelulusan Web Fundamental</item>
+        <item>Sertifikat Workshop Arsitektur Component</item>
+        <item>Sertifikat Workshop Android Jetpack</item>
+        <item>Sertifikat Workshop dan Seminar IOT</item>
+        <item>Sertifikat Workshop Flutter</item>
+    </string-array>
+</resources>

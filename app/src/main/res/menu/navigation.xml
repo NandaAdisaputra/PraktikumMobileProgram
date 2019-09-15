@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/menu_nilai"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/nilai" />
+    <item
+        android:id="@+id/menu_portofolio"
+        android:icon="@drawable/ic_school_black_24dp"
+        android:title="@string/portofolio" />
+    <item
+        android:id="@+id/menu_perhitungan"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="@string/perhitungan" />
+    <item
+        android:id="@+id/menu_bangundatar"
+        android:icon="@drawable/ic_folder_black_24dp"
+        android:title="@string/bangun_datar"/>
+    <item
+        android:id="@+id/menu_formpenjualan"
+        android:icon="@drawable/ic_computer_black_24dp"
+        android:title="@string/form_penjualan"/>
+    <item
+        android:id="@+id/menu_ifelse"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="@string/if_else"/>
+    <item
+        android:id="@+id/menu_googlemap"
+        android:icon="@drawable/ic_place_black_24dp"
+        android:title="@string/google_map"/>
+    <item
+        android:id="@+id/menu_crud"
+        android:icon="@drawable/ic_mode_edit_black_24dp"
+        android:title="@string/crud"/>
+
+    <item
+        android:id="@+id/menu_logout"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        android:title="@string/logout"/>
+
+</menu>

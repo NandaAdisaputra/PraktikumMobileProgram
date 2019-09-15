@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_centerInParent="true"
+    tools:context=".activity.SplashScreenActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/_500sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_margin="@dimen/_45sdp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:src="@drawable/hackathon" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_profil"
+        android:textSize="@dimen/_24ssp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_below="@+id/profile_image"/>
+
+</RelativeLayout>
