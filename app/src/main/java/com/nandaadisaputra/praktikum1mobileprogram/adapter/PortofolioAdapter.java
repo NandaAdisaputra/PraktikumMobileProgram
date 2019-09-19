@@ -55,13 +55,13 @@ public class PortofolioAdapter extends RecyclerView.Adapter<PortofolioAdapter.Vi
         return list.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.iv_gambar)
         ImageView ivGambar;
         @BindView(R.id.tv_judul)
         TextView tvJudul;
         private final Unbinder unbinder;
-        public ViewHolder(@NonNull final View itemView) {
+        ViewHolder(@NonNull final View itemView) {
             super(itemView);
             unbinder = ButterKnife.bind(this, itemView);
             //onclick

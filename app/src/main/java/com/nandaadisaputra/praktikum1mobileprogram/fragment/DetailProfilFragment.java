@@ -34,7 +34,6 @@ public class DetailProfilFragment extends Fragment implements ViewPagerEx.OnPage
 
     @BindView(R.id.sliderSlider)
     SliderLayout sliderSlider;
-    TextView pointUser;
     @BindView(R.id.lihatnilai)
     Button lihatnilai;
     @BindView(R.id.profile_image)

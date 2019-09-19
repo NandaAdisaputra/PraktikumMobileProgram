@@ -24,14 +24,8 @@ public class PortofolioFragment extends Fragment implements CollectionInterfaceP
     //Deklarasi Variable
     private TypedArray dataGambar;
     private String[] dataJudul;
-    private String[] dataDeskripsi;
-    private String[] dataTanggal;
-    private String[] dataGenre;
     //Inisialisasi data yang akan digunakan
     private ArrayList<Portofolio> nportofolio;
-    private PortofolioAdapter adapter;
-    //deklarasi variabel reyclerview
-    private RecyclerView mRecyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,8 +34,9 @@ public class PortofolioFragment extends Fragment implements CollectionInterfaceP
         prepare();
         addItem();
         //menampilkan reyclerview yang ada pada file layout dengan id n_movie
-        mRecyclerView = rootView.findViewById(R.id.n_portofolio);
-        adapter = new PortofolioAdapter(nportofolio, getActivity(), this);
+        //deklarasi variabel reyclerview
+        RecyclerView mRecyclerView = rootView.findViewById(R.id.n_portofolio);
+        PortofolioAdapter adapter = new PortofolioAdapter(nportofolio, getActivity(), this);
         //menset setukuran
         //menset layoutmanager dan menampilkan daftar/list
         //dalam bentuk linearlayoutmanager pada class saat ini

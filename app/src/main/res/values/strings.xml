@@ -75,6 +75,9 @@
     <string name="nama_sertifikat">Nama Sertifikat</string>
     <string name="lihat_cv_saya">Lihat CV Saya</string>
     <string name="go_to_kalkulator">Go to Kalkulator</string>
+    <string name="kalkulator">Kalkulator</string>
+    <string name="masukkan_angka_pertama">Masukkan Angka Pertama</string>
+    <string name="masukkan_angka_kedua">Masukkan Angka Kedua</string>
     <array name="data_gambar">
         <item>@drawable/sertifikatandroidpemula</item>
         <item>@drawable/sertifikatkotlin</item>

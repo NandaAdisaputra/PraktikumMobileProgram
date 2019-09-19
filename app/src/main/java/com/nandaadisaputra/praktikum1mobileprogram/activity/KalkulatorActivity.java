@@ -1,5 +1,6 @@
 package com.nandaadisaputra.praktikum1mobileprogram.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -7,9 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.muddzdev.styleabletoast.StyleableToast;
 import com.nandaadisaputra.praktikum1mobileprogram.R;
 import com.nandaadisaputra.praktikum1mobileprogram.model.KalkulatorModel;
 import com.nandaadisaputra.praktikum1mobileprogram.viewmodel.KalkulatorViewModel;
@@ -38,6 +41,7 @@ public class KalkulatorActivity extends AppCompatActivity implements View.OnClic
     @BindView(R.id.backkalkulator)
     TextView backkalkulator;
     private KalkulatorViewModel kalkulatorViewModel;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +69,7 @@ public class KalkulatorActivity extends AppCompatActivity implements View.OnClic
             edtLength.setError("Field ini tidak boleh kosong");
         } else if (TextUtils.isEmpty(width)) {
             edtWidth.setError("Field ini tidak boleh kosong");
+            Toast.makeText(this, "Maaf Field ini harus diisi", Toast.LENGTH_LONG).show();
         } else {
             double l = Double.parseDouble(length);
             double w = Double.parseDouble(width);

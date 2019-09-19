@@ -21,7 +21,7 @@ public class SplashScreenActivity  extends AppCompatActivity {
 
             setContentView(R.layout.activity_splash_screen);
 
-            int splashInterval = 3000;
+            int splashInterval = 5000;
             new Handler().postDelayed(new Runnable() {
 
 
