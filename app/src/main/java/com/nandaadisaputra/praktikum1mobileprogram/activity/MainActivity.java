@@ -6,21 +6,17 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
-
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-
 import com.google.android.material.navigation.NavigationView;
 import com.nandaadisaputra.praktikum1mobileprogram.R;
 import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.CrudActivity;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.NilaiFragment;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.PortofolioFragment;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.ProfilFragment;
-import com.shashank.sony.fancytoastlib.FancyToast;
 
 public class MainActivity extends AppCompatActivity {
     private Fragment pageContent = new ProfilFragment();
@@ -57,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.menu_perhitungan:
                     startActivity(new Intent(MainActivity.this, KalkulatorActivity.class));
                     title = "Kalkulator";
-                    FancyToast.makeText(this,"Anda Masuk ke Fitur Kalkulator",FancyToast.LENGTH_LONG,FancyToast.INFO,true);
                     break;
                 case R.id.menu_bangundatar:
                     startActivity(new Intent(MainActivity.this, BangunDatarActivity.class));
@@ -72,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     title = "If Else";
                     break;
                 case R.id.menu_googlemap:
-                    startActivity(new Intent(MainActivity.this, GoogleMapActivity.class));
+                    startActivity(new Intent(MainActivity.this, MapsActivity.class));
                     title = "Google Map";
                     break;
                 case R.id.menu_crud:

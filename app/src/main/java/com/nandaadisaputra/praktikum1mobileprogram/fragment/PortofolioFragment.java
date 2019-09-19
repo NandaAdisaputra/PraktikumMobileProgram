@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,12 +20,17 @@ import com.nandaadisaputra.praktikum1mobileprogram.model.Portofolio;
 import com.nandaadisaputra.praktikum1mobileprogram.presenter.CollectionInterfacePortofolio;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
-public class PortofolioFragment extends Fragment implements CollectionInterfacePortofolio {
-    //Deklarasi Variable
+import butterknife.BindView;
+
+public class PortofolioFragment extends Fragment implements CollectionInterfacePortofolio,SearchView.OnQueryTextListener{
+    @BindView(R.id.search)
+    SearchView search;
+    @BindView(R.id.n_portofolio)
+    RecyclerView nPortofolio;
     private TypedArray dataGambar;
     private String[] dataJudul;
-    //Inisialisasi data yang akan digunakan
     private ArrayList<Portofolio> nportofolio;
 
     @Override
@@ -33,24 +39,15 @@ public class PortofolioFragment extends Fragment implements CollectionInterfaceP
         View rootView = inflater.inflate(R.layout.portofolio_fragment, container, false);
         prepare();
         addItem();
-        //menampilkan reyclerview yang ada pada file layout dengan id n_movie
-        //deklarasi variabel reyclerview
-        RecyclerView mRecyclerView = rootView.findViewById(R.id.n_portofolio);
         PortofolioAdapter adapter = new PortofolioAdapter(nportofolio, getActivity(), this);
-        //menset setukuran
-        //menset layoutmanager dan menampilkan daftar/list
-        //dalam bentuk linearlayoutmanager pada class saat ini
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
-        //membuat adapter baru untuk reyclerview
-        mRecyclerView.setAdapter(adapter);
-        //menset nilai dari adapter
-        mRecyclerView.setHasFixedSize(true);
+        nPortofolio.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
+        nPortofolio.setAdapter(adapter);
+        nPortofolio.setHasFixedSize(true);
 
         return rootView;
     }
 
     private void addItem() {
-        //Inisialisasi ArrayList
         nportofolio = new ArrayList<>();
 
         for (int i = 0; i < dataJudul.length; i++) {
@@ -61,20 +58,26 @@ public class PortofolioFragment extends Fragment implements CollectionInterfaceP
         }
     }
 
-
     private void prepare() {
-        //Ambil data picture dari array data gambar di Strings
         dataGambar = getResources().obtainTypedArray(R.array.data_gambar);
-        //Ambil data text dari array di Strings
         dataJudul = getResources().getStringArray(R.array.data_judul);
     }
 
-    //intent dengan interface
     @Override
     public void intentToDetail(Portofolio portofolio) {
         Intent intent = new Intent(getActivity(), KalkulatorActivity.class);
         intent.putExtra("model", portofolio);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        return false;
     }
 
     public interface OnFragmentInteractionListener {

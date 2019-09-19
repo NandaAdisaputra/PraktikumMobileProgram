@@ -1,4 +1,16 @@
 <resources>
+    <array name="data_gambar">
+        <item>@drawable/sertifikatandroidpemula</item>
+        <item>@drawable/sertifikatkotlin</item>
+        <item>@drawable/sertifikatgapuradigital</item>
+        <item>@drawable/sertifikathackathon</item>
+        <item>@drawable/csic</item>
+        <item>@drawable/web</item>
+        <item>@drawable/arsitektur</item>
+        <item>@drawable/jetpackclass</item>
+        <item>@drawable/kehadiran1</item>
+        <item>@drawable/flutterclass</item>
+    </array>
     <string name="app_name">Practical Mobile Program</string>
     <string name="image">image</string>
     <string name="nama">Name</string>
@@ -78,18 +90,7 @@
     <string name="kalkulator">Kalkulator</string>
     <string name="masukkan_angka_pertama">Masukkan Angka Pertama</string>
     <string name="masukkan_angka_kedua">Masukkan Angka Kedua</string>
-    <array name="data_gambar">
-        <item>@drawable/sertifikatandroidpemula</item>
-        <item>@drawable/sertifikatkotlin</item>
-        <item>@drawable/sertifikatgapuradigital</item>
-        <item>@drawable/sertifikathackathon</item>
-        <item>@drawable/csic</item>
-        <item>@drawable/web</item>
-        <item>@drawable/arsitektur</item>
-        <item>@drawable/jetpackclass</item>
-        <item>@drawable/kehadiran1</item>
-        <item>@drawable/flutterclass</item>
-    </array>
+    <string name="title_activity_maps">Map</string>
     <string-array name="data_judul">
         <item>Sertifikat Kelulusan Android Pemula</item>
         <item>Sertifikat Kelulusan Belajar Kotlin Fundamental</item>
