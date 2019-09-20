@@ -15,9 +15,9 @@
         android:icon="@drawable/ic_school_black_24dp"
         android:title="@string/portofolio" />
     <item
-        android:id="@+id/menu_perhitungan"
+        android:id="@+id/menu_kalkulator"
         android:icon="@drawable/ic_person_black_24dp"
-        android:title="@string/perhitungan" />
+        android:title="@string/kalkulator" />
     <item
         android:id="@+id/menu_bangundatar"
         android:icon="@drawable/ic_folder_black_24dp"

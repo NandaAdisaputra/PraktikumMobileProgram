@@ -36,7 +36,6 @@
             android:label="@string/title_activity_maps" />
 
         <activity android:name=".activity.crud.CrudActivity" />
-        <activity android:name=".activity.GoogleMapActivity" />
         <activity android:name=".activity.IfElseActivity" />
         <activity android:name=".activity.FormPenjualanActivity" />
         <activity android:name=".activity.BangunDatarActivity" />

@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     pageContent = new PortofolioFragment();
                     title = "Portofolio";
                     break;
-                case R.id.menu_perhitungan:
+                case R.id.menu_kalkulator:
                     startActivity(new Intent(MainActivity.this, KalkulatorActivity.class));
                     title = "Kalkulator";
                     break;

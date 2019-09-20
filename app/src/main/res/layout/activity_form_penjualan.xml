@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/button_circle"
+    android:background="@color/white"
     android:layout_margin="@dimen/_4sdp"
     tools:context=".activity.BangunDatarActivity">
 
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_8sdp"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:textSize="@dimen/_14ssp"
         android:text="@string/nama_barang" />
     <EditText
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_8sdp"
         android:textSize="@dimen/_14ssp"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:text="@string/jumlah_barang" />
     <EditText
         android:id="@+id/edt_jumlahbarang"
@@ -57,7 +57,7 @@
         android:layout_margin="@dimen/_8sdp"
         android:textStyle="normal"
         android:textSize="@dimen/_14ssp"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:text="@string/harga_satuan" />
     <EditText
         android:id="@+id/edt_hargasatuan"
@@ -85,7 +85,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:textStyle="normal"
         android:textSize="@dimen/_14ssp"
         android:layout_margin="@dimen/_8sdp"
@@ -116,7 +116,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:textStyle="normal"
         android:textSize="@dimen/_14ssp"
         android:layout_margin="@dimen/_8ssp"
@@ -139,7 +139,7 @@
         android:id="@+id/btn_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:layout_margin="@dimen/_8sdp"
         android:layout_marginTop="@dimen/_14sdp"
         android:textStyle="bold"

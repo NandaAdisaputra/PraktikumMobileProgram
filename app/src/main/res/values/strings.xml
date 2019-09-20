@@ -55,7 +55,7 @@
     <string name="kali">x</string>
     <string name="bagi">/</string>
     <string name="result">result</string>
-    <string name="perhitungan">Perhitungan</string>
+    <string name="kalkulator">Kalkulator</string>
     <string name="angka_1">Angka 1</string>
     <string name="angka_2">Angka 2</string>
     <string name="tambah">+</string>
@@ -87,7 +87,6 @@
     <string name="nama_sertifikat">Nama Sertifikat</string>
     <string name="lihat_cv_saya">Lihat CV Saya</string>
     <string name="go_to_kalkulator">Go to Kalkulator</string>
-    <string name="kalkulator">Kalkulator</string>
     <string name="masukkan_angka_pertama">Masukkan Angka Pertama</string>
     <string name="masukkan_angka_kedua">Masukkan Angka Kedua</string>
     <string name="title_activity_maps">Map</string>

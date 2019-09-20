@@ -20,9 +20,6 @@ public class KalkulatorModel {
     public double getKurang() {
         return angka1 - angka2;
     }
-    public double getBagi() {
-
-        return angka1/angka2;
-    }
+    public double getBagi() { return angka1/angka2; }
 }
 
