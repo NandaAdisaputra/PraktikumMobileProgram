@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     title = "If Else";
                     break;
                 case R.id.menu_googlemap:
-                    startActivity(new Intent(MainActivity.this, MapsActivity.class));
+                    startActivity(new Intent(MainActivity.this, MapActivity.class));
                     title = "Google Map";
                     break;
                 case R.id.menu_crud:
