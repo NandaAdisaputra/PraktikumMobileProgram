@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     title = "Google Map";
                     break;
                 case R.id.menu_crud:
-                    startActivity(new Intent(MainActivity.this, CrudActivity.class));
+                    startActivity(new Intent(MainActivity.this, GpsMapActivity.class));
                     title = "Crud Sqlite";
                     break;
                 case R.id.menu_logout:

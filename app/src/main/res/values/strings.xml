@@ -93,6 +93,8 @@
     <string name="masukkan_angka_nilai_akhir">Masukkan Angka Nilai Akhir</string>
     <string name="hasil_nilai_akhir">Hasil Nilai Akhir</string>
     <string name="nilai_hasil_akhir">Nilai Hasil Akhir</string>
+    <string name="my_location">My Location</string>
+    <string name="get_location">Get Location</string>
     <string-array name="data_judul">
         <item>Sertifikat Kelulusan Android Pemula</item>
         <item>Sertifikat Kelulusan Belajar Kotlin Fundamental</item>

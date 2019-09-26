@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.nandaadisaputra.praktikum1mobileprogram">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,21 +18,14 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:targetApi="donut">
-        <activity android:name=".activity.MapMainActivity" />
         <activity android:name=".activity.MapActivity" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
+
         <activity
             android:name=".activity.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".activity.crud.CrudActivity" />
         <activity android:name=".activity.IfElseActivity" />
+        <activity android:name=".activity.GpsMapActivity" />
         <activity android:name=".activity.FormPenjualanActivity" />
         <activity android:name=".activity.BangunDatarActivity" />
         <activity android:name=".activity.KalkulatorActivity" />
@@ -43,10 +42,5 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
     </application>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>
