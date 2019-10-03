@@ -95,6 +95,16 @@
     <string name="nilai_hasil_akhir">Nilai Hasil Akhir</string>
     <string name="my_location">My Location</string>
     <string name="get_location">Get Location</string>
+    <string name="latitude">Latitude</string>
+    <string name="_0_0">0.0</string>
+    <string name="longitude">Longitude</string>
+    <string name="alert_dialog">Alert Dialog</string>
+    <string name="title">Judul</string>
+
+    <string name="description">Deskripsi</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Hapus</string>
+    <string name="date">Date</string>
     <string-array name="data_judul">
         <item>Sertifikat Kelulusan Android Pemula</item>
         <item>Sertifikat Kelulusan Belajar Kotlin Fundamental</item>

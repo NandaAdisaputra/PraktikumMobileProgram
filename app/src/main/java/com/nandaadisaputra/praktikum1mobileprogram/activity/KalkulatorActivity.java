@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.muddzdev.styleabletoast.StyleableToast;
 import com.nandaadisaputra.praktikum1mobileprogram.R;
 import com.nandaadisaputra.praktikum1mobileprogram.model.KalkulatorModel;
 import com.nandaadisaputra.praktikum1mobileprogram.viewmodel.KalkulatorViewModel;

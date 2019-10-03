@@ -13,7 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.navigation.NavigationView;
 import com.nandaadisaputra.praktikum1mobileprogram.R;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.CrudActivity;
+import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.activity.NoteActivity;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.NilaiFragment;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.PortofolioFragment;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.ProfilFragment;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     title = "Google Map";
                     break;
                 case R.id.menu_crud:
-                    startActivity(new Intent(MainActivity.this, GpsMapActivity.class));
+                    startActivity(new Intent(MainActivity.this, NoteActivity.class));
                     title = "Crud Sqlite";
                     break;
                 case R.id.menu_logout:
