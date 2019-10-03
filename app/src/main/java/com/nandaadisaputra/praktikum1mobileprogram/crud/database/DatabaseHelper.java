@@ -1,10 +1,10 @@
-package com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database;
+package com.nandaadisaputra.praktikum1mobileprogram.crud.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database.DatabaseContract.NoteColumns.TABLE_NAME;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.TABLE_NAME;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 

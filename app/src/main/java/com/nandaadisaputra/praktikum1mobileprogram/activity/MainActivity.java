@@ -13,7 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.navigation.NavigationView;
 import com.nandaadisaputra.praktikum1mobileprogram.R;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.activity.NoteActivity;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.activity.NoteActivity;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.NilaiFragment;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.PortofolioFragment;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.ProfilFragment;

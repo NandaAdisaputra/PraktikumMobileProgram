@@ -1,4 +1,4 @@
-package com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database;
+package com.nandaadisaputra.praktikum1mobileprogram.crud.database;
 
 import android.provider.BaseColumns;
 

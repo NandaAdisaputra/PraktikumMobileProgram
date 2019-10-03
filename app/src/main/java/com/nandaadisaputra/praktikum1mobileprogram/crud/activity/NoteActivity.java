@@ -1,4 +1,4 @@
-package com.nandaadisaputra.praktikum1mobileprogram.activity.crud.activity;
+package com.nandaadisaputra.praktikum1mobileprogram.crud.activity;
 
 
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 
 import com.nandaadisaputra.praktikum1mobileprogram.R;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.helper.MappingHelper;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.helper.MappingHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,9 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.adapter.NoteAdapter;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database.NoteHelper;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.entity.Note;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.adapter.NoteAdapter;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.database.NoteHelper;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.entity.Note;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

@@ -1,12 +1,12 @@
-package com.nandaadisaputra.praktikum1mobileprogram.activity.crud.helper;
+package com.nandaadisaputra.praktikum1mobileprogram.crud.helper;
 
 import android.database.Cursor;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.entity.Note;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.entity.Note;
 import java.util.ArrayList;
 import static android.provider.BaseColumns._ID;
-import static com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database.DatabaseContract.NoteColumns.DATE;
-import static com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database.DatabaseContract.NoteColumns.DESCRIPTION;
-import static com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database.DatabaseContract.NoteColumns.TITLE;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.DATE;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.DESCRIPTION;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.TITLE;
 
 public class MappingHelper {
 

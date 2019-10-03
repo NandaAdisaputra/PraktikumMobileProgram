@@ -1,4 +1,4 @@
-package com.nandaadisaputra.praktikum1mobileprogram.activity.crud.adapter;
+package com.nandaadisaputra.praktikum1mobileprogram.crud.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,9 +12,9 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.nandaadisaputra.praktikum1mobileprogram.R;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.CustomOnItemClickListener;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.activity.NoteAddUpdateActivity;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.entity.Note;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.CustomOnItemClickListener;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.activity.NoteAddUpdateActivity;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.entity.Note;
 
 import java.util.ArrayList;
 

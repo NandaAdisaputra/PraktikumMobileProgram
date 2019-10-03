@@ -12,8 +12,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:targetApi="donut">
-        <activity android:name=".activity.crud.activity.NoteActivity" />
-        <activity android:name=".activity.crud.activity.NoteAddUpdateActivity" />
+        <activity android:name=".crud.activity.NoteActivity" />
+        <activity android:name=".crud.activity.NoteAddUpdateActivity" />
         <activity android:name=".activity.MapActivity" />
         <activity
             android:name=".activity.MapsActivity"

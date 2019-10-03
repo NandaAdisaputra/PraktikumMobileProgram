@@ -1,4 +1,4 @@
-package com.nandaadisaputra.praktikum1mobileprogram.activity.crud.entity;
+package com.nandaadisaputra.praktikum1mobileprogram.crud.entity;
 
 import android.os.Parcel;
 import android.os.Parcelable;

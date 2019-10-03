@@ -1,4 +1,4 @@
-package com.nandaadisaputra.praktikum1mobileprogram.activity.crud;
+package com.nandaadisaputra.praktikum1mobileprogram.crud;
 
 import android.view.View;
 

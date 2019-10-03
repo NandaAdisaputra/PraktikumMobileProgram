@@ -1,4 +1,4 @@
-package com.nandaadisaputra.praktikum1mobileprogram.activity.crud.activity;
+package com.nandaadisaputra.praktikum1mobileprogram.crud.activity;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -15,17 +15,17 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nandaadisaputra.praktikum1mobileprogram.R;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database.NoteHelper;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.crud.entity.Note;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.database.NoteHelper;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.entity.Note;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database.DatabaseContract.NoteColumns.DATE;
-import static com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database.DatabaseContract.NoteColumns.DESCRIPTION;
-import static com.nandaadisaputra.praktikum1mobileprogram.activity.crud.database.DatabaseContract.NoteColumns.TITLE;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.DATE;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.DESCRIPTION;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.TITLE;
 
 public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText edtTitle, edtDescription;
