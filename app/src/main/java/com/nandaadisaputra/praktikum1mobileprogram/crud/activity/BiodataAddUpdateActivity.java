@@ -15,28 +15,47 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nandaadisaputra.praktikum1mobileprogram.R;
-import com.nandaadisaputra.praktikum1mobileprogram.crud.database.NoteHelper;
-import com.nandaadisaputra.praktikum1mobileprogram.crud.entity.Note;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.database.BiodataHelper;
+import com.nandaadisaputra.praktikum1mobileprogram.crud.entity.Biodata;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.ALAMAT;
 import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.DATE;
-import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.DESCRIPTION;
-import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.TITLE;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.JENIS_KELAMIN;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.NAMA;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.NOMOR;
+import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.TANGGAL_LAHIR;
 
-public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnClickListener {
-    private EditText edtTitle, edtDescription;
-    private Button btnSubmit;
+public class BiodataAddUpdateActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+    @BindView(R.id.edt_nomor)
+    EditText edtNomor;
+    @BindView(R.id.edt_nama)
+    EditText edtNama;
+    @BindView(R.id.edt_tanggalLahir)
+    EditText edtTanggalLahir;
+    @BindView(R.id.edt_jenisKelamin)
+    EditText edtJenisKelamin;
+    @BindView(R.id.edt_alamat)
+    EditText edtAlamat;
+    @BindView(R.id.btn_simpan)
+    Button btnSimpan;
+    @BindView(R.id.btn_back)
+    Button btnBack;
     private boolean isEdit = false;
-    private Note note;
+    private Biodata biodata;
     private int position;
-    private NoteHelper noteHelper;
+    private BiodataHelper biodataHelper;
 
-    public static final String EXTRA_NOTE = "extra_note";
+    public static final String EXTRA_BIODATA = "extra_biodata";
     public static final String EXTRA_POSITION = "extra_position";
     public static final int REQUEST_ADD = 100;
     public static final int RESULT_ADD = 101;
@@ -49,97 +68,106 @@ public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_note_add_update);
+        setContentView(R.layout.activity_biodata_add_update);
+        ButterKnife.bind(this);
 
-        edtTitle = findViewById(R.id.edt_title);
-        edtDescription = findViewById(R.id.edt_description);
-        btnSubmit = findViewById(R.id.btn_submit);
 
-        noteHelper = NoteHelper.getInstance(getApplicationContext());
+        biodataHelper = BiodataHelper.getInstance(getApplicationContext());
 
-        note = getIntent().getParcelableExtra(EXTRA_NOTE);
-        if (note != null) {
+        biodata = getIntent().getParcelableExtra(EXTRA_BIODATA);
+        if (biodata != null) {
             position = getIntent().getIntExtra(EXTRA_POSITION, 0);
             isEdit = true;
         } else {
-            note = new Note();
+            biodata = new Biodata();
         }
 
-        String actionBarTitle;
-        String btnTitle;
+        String actionBarSimpan;
+        String buttonSimpan;
 
         if (isEdit) {
-            actionBarTitle = "Ubah";
-            btnTitle = "Update";
+            actionBarSimpan = "Ubah";
+            buttonSimpan = "Update";
 
-            if (note != null) {
-                edtTitle.setText(note.getTitle());
-                edtDescription.setText(note.getDescription());
+            if (biodata != null) {
+                edtNomor.setText(biodata.getNomor());
+                edtNama.setText(biodata.getNama());
+                edtTanggalLahir.setText(biodata.getTanggal_lahir());
+                edtJenisKelamin.setText(biodata.getJenis_kelamin());
+                edtAlamat.setText(biodata.getAlamat());
             }
         } else {
-            actionBarTitle = "Tambah";
-            btnTitle = "Simpan";
+            actionBarSimpan = "Tambah";
+            buttonSimpan = "Simpan";
         }
 
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(actionBarTitle);
+            getSupportActionBar().setTitle(actionBarSimpan);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        btnSubmit.setText(btnTitle);
+        btnSimpan.setText(buttonSimpan);
 
-        btnSubmit.setOnClickListener(this);
+        btnSimpan.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.btn_submit) {
-            String title = edtTitle.getText().toString().trim();
-            String description = edtDescription.getText().toString().trim();
-
+        if (view.getId() == R.id.btn_simpan) {
+            String nomor = edtNomor.getText().toString().trim();
+            String nama = edtNama.getText().toString().trim();
+            String tanggal_lahir = edtTanggalLahir.getText().toString().trim();
+            String jenis_kelamin = edtJenisKelamin.getText().toString().trim();
+            String alamat = edtAlamat.getText().toString().trim();
             /*
             Jika fieldnya masih kosong maka tampilkan error
              */
-            if (TextUtils.isEmpty(title)) {
-                edtTitle.setError("Field can not be blank");
+            if (TextUtils.isEmpty(nomor)) {
+                edtNomor.setError("Field can not be blank");
                 return;
             }
 
-            note.setTitle(title);
-            note.setDescription(description);
+            biodata.setNomor(nomor);
+            biodata.setNama(nama);
+            biodata.setTanggal_lahir(tanggal_lahir);
+            biodata.setJenis_kelamin(jenis_kelamin);
+            biodata.setAlamat(alamat);
 
             Intent intent = new Intent();
-            intent.putExtra(EXTRA_NOTE, note);
+            intent.putExtra(EXTRA_BIODATA, biodata);
             intent.putExtra(EXTRA_POSITION, position);
 
             // Gunakan contentvalues untuk menampung data
             ContentValues values = new ContentValues();
-            values.put(TITLE, title);
-            values.put(DESCRIPTION, description);
+            values.put(NOMOR, nomor);
+            values.put(NAMA, nama);
+            values.put(TANGGAL_LAHIR, tanggal_lahir);
+            values.put(JENIS_KELAMIN, jenis_kelamin);
+            values.put(ALAMAT, alamat);
 
             /*
             Jika merupakan edit maka setresultnya UPDATE, dan jika bukan maka setresultnya ADD
             */
             if (isEdit) {
-                long result = noteHelper.update(String.valueOf(note.getId()), values);
+                long result = biodataHelper.update(String.valueOf(biodata.getId()), values);
                 if (result > 0) {
                     setResult(RESULT_UPDATE, intent);
                     finish();
                 } else {
-                    Toast.makeText(NoteAddUpdateActivity.this, "Gagal mengupdate data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BiodataAddUpdateActivity.this, "Gagal mengupdate data", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                note.setDate(getCurrentDate());
+                biodata.setDate(getCurrentDate());
                 values.put(DATE, getCurrentDate());
-                long result = noteHelper.insert(values);
+                long result = biodataHelper.insert(values);
 
                 if (result > 0) {
-                    note.setId((int) result);
+                    biodata.setId((int) result);
                     setResult(RESULT_ADD, intent);
                     finish();
                 } else {
-                    Toast.makeText(NoteAddUpdateActivity.this, "Gagal menambah data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(BiodataAddUpdateActivity.this, "Gagal menambah data", Toast.LENGTH_SHORT).show();
                 }
             }
         }
@@ -181,7 +209,7 @@ public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnC
     /*
     Konfirmasi dialog sebelum proses batal atau hapus
     close = 10
-    deleteNote = 20
+    deleteBiodata = 20
      */
     private void showAlertDialog(int type) {
         final boolean isDialogClose = type == ALERT_DIALOG_CLOSE;
@@ -192,7 +220,7 @@ public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnC
             dialogMessage = "Apakah anda ingin membatalkan perubahan pada form?";
         } else {
             dialogMessage = "Apakah anda yakin ingin menghapus item ini?";
-            dialogTitle = "Hapus Note";
+            dialogTitle = "Hapus Biodata";
         }
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -204,14 +232,14 @@ public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnC
                     if (isDialogClose) {
                         finish();
                     } else {
-                        long result = noteHelper.deleteById(String.valueOf(note.getId()));
+                        long result = biodataHelper.deleteById(String.valueOf(biodata.getId()));
                         if (result > 0) {
                             Intent intent = new Intent();
                             intent.putExtra(EXTRA_POSITION, position);
                             setResult(RESULT_DELETE, intent);
                             finish();
                         } else {
-                            Toast.makeText(NoteAddUpdateActivity.this, "Gagal menghapus data", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(BiodataAddUpdateActivity.this, "Gagal menghapus data", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })

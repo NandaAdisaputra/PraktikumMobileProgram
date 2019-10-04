@@ -10,22 +10,22 @@ import android.database.sqlite.SQLiteOpenHelper;
 import static android.provider.MediaStore.Audio.Playlists.Members._ID;
 import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.DatabaseContract.NoteColumns.TABLE_NAME;
 
-public class NoteHelper {
+public class BiodataHelper {
     private static final String DATABASE_TABLE = TABLE_NAME;
     private static DatabaseHelper dataBaseHelper;
-    private static NoteHelper INSTANCE;
+    private static BiodataHelper INSTANCE;
 
     private static SQLiteDatabase database;
 
-    private NoteHelper(Context context) {
+    private BiodataHelper(Context context) {
         dataBaseHelper = new DatabaseHelper(context);
     }
 
-    public static NoteHelper getInstance(Context context) {
+    public static BiodataHelper getInstance(Context context) {
         if (INSTANCE == null) {
             synchronized (SQLiteOpenHelper.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = new NoteHelper(context);
+                    INSTANCE = new BiodataHelper(context);
                 }
             }
         }

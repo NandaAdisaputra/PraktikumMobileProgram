@@ -8,19 +8,25 @@ import static com.nandaadisaputra.praktikum1mobileprogram.crud.database.Database
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "dbnoteapp";
+    private static final String DATABASE_NAME = "dbbiodataapp";
 
     private static final int DATABASE_VERSION = 1;
 
-    private static final String SQL_CREATE_TABLE_NOTE = String.format("CREATE TABLE %s"
+    private static final String SQL_CREATE_TABLE_BIODATA = String.format("CREATE TABLE %s"
                     + " (%s INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    " %s TEXT NOT NULL," +
+                    " %s TEXT NOT NULL," +
+                    " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL," +
                     " %s TEXT NOT NULL)",
             TABLE_NAME,
             DatabaseContract.NoteColumns._ID,
-            DatabaseContract.NoteColumns.TITLE,
-            DatabaseContract.NoteColumns.DESCRIPTION,
+            DatabaseContract.NoteColumns.NOMOR,
+            DatabaseContract.NoteColumns.NAMA,
+            DatabaseContract.NoteColumns.TANGGAL_LAHIR,
+            DatabaseContract.NoteColumns.JENIS_KELAMIN,
+            DatabaseContract.NoteColumns.ALAMAT,
             DatabaseContract.NoteColumns.DATE
     );
 
@@ -30,7 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(SQL_CREATE_TABLE_NOTE);
+        db.execSQL(SQL_CREATE_TABLE_BIODATA);
     }
 
     /*

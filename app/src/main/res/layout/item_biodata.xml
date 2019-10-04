@@ -28,20 +28,46 @@
                 android:text="@string/date"
                 android:textSize="12sp" />
             <TextView
-                android:id="@+id/tv_item_title"
+                android:id="@+id/tv_item_nomor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:gravity="start"
-                android:text="@string/title"
+                android:text="@string/nomor"
                 android:textSize="16sp"
                 android:textStyle="bold" />
             <TextView
-                android:id="@+id/tv_item_description"
+                android:id="@+id/tv_item_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:gravity="start"
+                android:text="@string/nama"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_item_tanggalLahir"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:text="@string/description"
+                android:maxHeight="@dimen/_150sdp"
+                android:text="@string/tanggal_lahir"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_item_jenisKelamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:maxHeight="@dimen/_150sdp"
+                android:text="@string/jenis_kelamin"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_item_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:maxHeight="@dimen/_150sdp"
+                android:text="@string/alamat"
                 android:textSize="14sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -12,20 +12,15 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:targetApi="donut">
-        <activity android:name=".crud.activity.NoteActivity" />
-        <activity android:name=".crud.activity.NoteAddUpdateActivity" />
+        <activity android:name=".crud.activity.BiodataAddUpdateActivity" />
         <activity android:name=".activity.MapActivity" />
-        <activity
-            android:name=".activity.MapsActivity"
-            android:label="@string/title_activity_maps" />
         <activity android:name=".activity.IfElseActivity" />
         <activity android:name=".activity.GpsMapActivity" />
-        <activity android:name=".activity.AlertDialog" />
         <activity android:name=".activity.FormPenjualanActivity" />
         <activity android:name=".activity.BangunDatarActivity" />
         <activity android:name=".activity.KalkulatorActivity" />
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.SplashScreenActivity">
+        <activity android:name=".crud.activity.BiodataActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
