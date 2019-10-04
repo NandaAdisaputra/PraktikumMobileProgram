@@ -1,6 +1,6 @@
-package com.nandaadisaputra.praktikum1mobileprogram.viewmodel;
+package com.nandaadisaputra.praktikum1mobileprogram.bangundatar.viewmodel;
 
-import com.nandaadisaputra.praktikum1mobileprogram.model.BangunDatarModel;
+import com.nandaadisaputra.praktikum1mobileprogram.bangundatar.model.BangunDatarModel;
 
 public class BangunDatarViewModel {
 

@@ -1,4 +1,4 @@
-package com.nandaadisaputra.praktikum1mobileprogram.activity;
+package com.nandaadisaputra.praktikum1mobileprogram.bangundatar.activity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,10 +10,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nandaadisaputra.praktikum1mobileprogram.R;
-import com.nandaadisaputra.praktikum1mobileprogram.model.BangunDatarModel;
-import com.nandaadisaputra.praktikum1mobileprogram.model.KalkulatorModel;
-import com.nandaadisaputra.praktikum1mobileprogram.viewmodel.BangunDatarViewModel;
-import com.nandaadisaputra.praktikum1mobileprogram.viewmodel.KalkulatorViewModel;
+import com.nandaadisaputra.praktikum1mobileprogram.bangundatar.model.BangunDatarModel;
+import com.nandaadisaputra.praktikum1mobileprogram.bangundatar.viewmodel.BangunDatarViewModel;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

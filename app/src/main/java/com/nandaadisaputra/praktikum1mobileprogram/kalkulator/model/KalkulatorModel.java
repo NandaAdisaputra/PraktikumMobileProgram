@@ -1,4 +1,4 @@
-package com.nandaadisaputra.praktikum1mobileprogram.model;
+package com.nandaadisaputra.praktikum1mobileprogram.kalkulator.model;
 
 public class KalkulatorModel {
     double angka1;

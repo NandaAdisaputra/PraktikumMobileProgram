@@ -14,13 +14,14 @@
         tools:targetApi="donut">
         <activity android:name=".crud.activity.BiodataAddUpdateActivity" />
         <activity android:name=".activity.MapActivity" />
+        <activity android:name=".crud.activity.BiodataActivity"/>
         <activity android:name=".activity.IfElseActivity" />
         <activity android:name=".activity.GpsMapActivity" />
         <activity android:name=".activity.FormPenjualanActivity" />
-        <activity android:name=".activity.BangunDatarActivity" />
-        <activity android:name=".activity.KalkulatorActivity" />
+        <activity android:name=".bangundatar.activity.BangunDatarActivity" />
+        <activity android:name=".kalkulator.activity.KalkulatorActivity" />
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".crud.activity.BiodataActivity">
+        <activity android:name=".activity.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

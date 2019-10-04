@@ -15,10 +15,12 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
 import com.nandaadisaputra.praktikum1mobileprogram.R;
+import com.nandaadisaputra.praktikum1mobileprogram.bangundatar.activity.BangunDatarActivity;
 import com.nandaadisaputra.praktikum1mobileprogram.crud.activity.BiodataActivity;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.NilaiFragment;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.PortofolioFragment;
 import com.nandaadisaputra.praktikum1mobileprogram.fragment.ProfilFragment;
+import com.nandaadisaputra.praktikum1mobileprogram.kalkulator.activity.KalkulatorActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Fragment pageContent = new ProfilFragment();

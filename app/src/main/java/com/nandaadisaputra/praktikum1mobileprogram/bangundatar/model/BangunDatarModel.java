@@ -1,4 +1,4 @@
-package com.nandaadisaputra.praktikum1mobileprogram.model;
+package com.nandaadisaputra.praktikum1mobileprogram.bangundatar.model;
 
 public class BangunDatarModel {
     double angka1;

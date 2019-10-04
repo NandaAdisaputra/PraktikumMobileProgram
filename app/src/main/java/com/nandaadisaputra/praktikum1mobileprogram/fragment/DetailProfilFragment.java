@@ -18,10 +18,7 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.nandaadisaputra.praktikum1mobileprogram.R;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.FormPenjualanActivity;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.KalkulatorActivity;
-import com.nandaadisaputra.praktikum1mobileprogram.activity.MainActivity;
-import com.nandaadisaputra.praktikum1mobileprogram.model.Portofolio;
+import com.nandaadisaputra.praktikum1mobileprogram.kalkulator.activity.KalkulatorActivity;
 
 import java.util.HashMap;
 

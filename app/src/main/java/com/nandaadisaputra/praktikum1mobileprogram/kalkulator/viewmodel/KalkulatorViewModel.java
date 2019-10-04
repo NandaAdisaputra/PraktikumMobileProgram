@@ -1,6 +1,6 @@
-package com.nandaadisaputra.praktikum1mobileprogram.viewmodel;
+package com.nandaadisaputra.praktikum1mobileprogram.kalkulator.viewmodel;
 
-import com.nandaadisaputra.praktikum1mobileprogram.model.KalkulatorModel;
+import com.nandaadisaputra.praktikum1mobileprogram.kalkulator.model.KalkulatorModel;
 
 public class KalkulatorViewModel {
     private KalkulatorModel kalkulatorModel;

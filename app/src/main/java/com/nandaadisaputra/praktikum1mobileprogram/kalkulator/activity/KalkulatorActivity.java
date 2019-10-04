@@ -1,4 +1,4 @@
-package com.nandaadisaputra.praktikum1mobileprogram.activity;
+package com.nandaadisaputra.praktikum1mobileprogram.kalkulator.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,8 +13,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nandaadisaputra.praktikum1mobileprogram.R;
-import com.nandaadisaputra.praktikum1mobileprogram.model.KalkulatorModel;
-import com.nandaadisaputra.praktikum1mobileprogram.viewmodel.KalkulatorViewModel;
+import com.nandaadisaputra.praktikum1mobileprogram.activity.MainActivity;
+import com.nandaadisaputra.praktikum1mobileprogram.kalkulator.model.KalkulatorModel;
+import com.nandaadisaputra.praktikum1mobileprogram.kalkulator.viewmodel.KalkulatorViewModel;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -55,7 +56,7 @@ public class KalkulatorActivity extends AppCompatActivity implements View.OnClic
         btnKali.setOnClickListener(this);
         btnBagi.setOnClickListener(this);
         backkalkulator.setOnClickListener(view -> {
-            Intent intent = new Intent(KalkulatorActivity.this,MainActivity.class);
+            Intent intent = new Intent(KalkulatorActivity.this, MainActivity.class);
             startActivity(intent);
         });
     }
