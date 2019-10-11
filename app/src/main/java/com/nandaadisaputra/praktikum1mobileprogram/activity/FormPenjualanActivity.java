@@ -62,6 +62,7 @@ public class FormPenjualanActivity extends AppCompatActivity implements View.OnC
             edtKembalian.setText(hasil3);
         });
     }
+    //
     @Override
     public void onClick(View v) {
         String a = edtJumlahbarang.getText().toString().trim();
