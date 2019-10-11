@@ -1,103 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="@dimen/_8sdp"
     tools:context=".crud.activity.BiodataAddUpdateActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp">
-
-        <EditText
-            android:id="@+id/edt_nomor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/nomor"
-            android:inputType="textCapSentences"
-            android:maxLines="1"
-            tools:ignore="Autofill" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp">
-
-        <EditText
-            android:id="@+id/edt_nama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/nama"
-            android:inputType="textCapSentences"
-            android:maxLines="1"
-            tools:ignore="Autofill" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp">
-
-        <EditText
-            android:id="@+id/edt_tanggalLahir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/tanggal_lahir"
-            android:inputType="textCapSentences"
-            android:maxLines="1"
-            tools:ignore="Autofill" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp">
-
-        <EditText
-            android:id="@+id/edt_jenisKelamin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/jenis_kelamin"
-            android:inputType="textCapSentences"
-            android:maxLines="1"
-            tools:ignore="Autofill" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp">
-
-        <EditText
-            android:id="@+id/edt_alamat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/alamat"
-            android:inputType="textCapSentences"
-            android:maxLines="1"
-            tools:ignore="Autofill" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btn_simpan"
-            style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:background="@drawable/background6"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
             android:layout_width="match_parent"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_height="wrap_content"
-            android:text="@string/simpan" />
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_marginStart="@dimen/_50sdp"
-            android:layout_marginEnd="@dimen/_50sdp"
-            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_height="@dimen/_150sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="cycle.json"
+            app:lottie_imageAssetsFolder="images"
+            app:lottie_loop="true" />
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/back" />
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/edt_nomor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nomor"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                tools:ignore="Autofill" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/edt_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nama"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                tools:ignore="Autofill" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/edt_tanggalLahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tanggal_lahir"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                tools:ignore="Autofill" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_16sdp">
+
+            <EditText
+                android:id="@+id/edt_jenisKelamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/jenis_kelamin"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                tools:ignore="Autofill" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_16sdp">
+            <EditText
+                android:id="@+id/edt_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/alamat"
+                android:inputType="textCapSentences"
+                android:maxLines="1"
+                tools:ignore="Autofill" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_simpan"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_circle"
+                android:text="@string/simpan" />
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:background="@drawable/button_circle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/back" />
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+
+</ScrollView>

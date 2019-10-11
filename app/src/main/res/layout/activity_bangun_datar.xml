@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,129 +11,161 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".bangundatar.activity.BangunDatarActivity">
 
-    <Button
-        android:id="@+id/btn_save"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edt_angka3"
-        android:background="@drawable/button_circle"
-        android:text="@string/save"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/_14ssp" />
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/edt_angka2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/angka2"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:inputType="numberDecimal"
-        android:lines="1"
-        tools:ignore="Autofill,LabelFor" />
-
-    <EditText
-        android:id="@+id/edt_angka3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/angka3"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:inputType="numberDecimal"
-        android:lines="1"
-        tools:ignore="Autofill,LabelFor" />
-
-    <LinearLayout
-        android:id="@+id/hitung"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_save"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_persegi"
+        <RelativeLayout
+            android:id="@+id/judul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/persegi"
-            android:visibility="gone"
-            tools:ignore="ButtonStyle" />
+            android:background="@android:color/darker_gray">
+
+            <TextView
+                android:id="@+id/backbangundatar"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                android:id="@+id/namaFitur"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_toEndOf="@+id/backbangundatar"
+                android:layout_toRightOf="@+id/backbangundatar"
+                android:text="@string/bangun_datar"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_24ssp" />
+        </RelativeLayout>
 
         <Button
-            android:id="@+id/btn_segitiga"
+            android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/segitiga"
-            android:visibility="gone"
-            tools:ignore="ButtonStyle" />
+            android:layout_below="@id/edt_angka3"
+            android:background="@drawable/button_circle"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14ssp" />
 
-        <Button
-            android:id="@+id/btn_trapesium"
+        <EditText
+            android:id="@+id/edt_angka2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/trapesium"
-            android:visibility="gone"
-            tools:ignore="ButtonStyle" />
+            android:layout_below="@id/angka2"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            tools:ignore="Autofill,LabelFor" />
 
-        <Button
-            android:id="@+id/btn_jajargenjang"
+        <EditText
+            android:id="@+id/edt_angka3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/jajar_genjang"
-            android:visibility="gone"
-            tools:ignore="ButtonStyle" />
-    </LinearLayout>
+            android:layout_below="@id/angka3"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            tools:ignore="Autofill,LabelFor" />
 
-    <TextView
-        android:id="@+id/angka1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image"
-        android:text="@string/angka_1" />
+        <LinearLayout
+            android:id="@+id/hitung"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_save"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/angka2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edt_angka1"
-        android:text="@string/angka_2" />
+            <Button
+                android:id="@+id/btn_persegi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/persegi"
+                android:visibility="gone"
+                tools:ignore="ButtonStyle" />
 
-    <TextView
-        android:id="@+id/angka3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edt_angka2"
-        android:text="@string/angka_3" />
+            <Button
+                android:id="@+id/btn_segitiga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/segitiga"
+                android:visibility="gone"
+                tools:ignore="ButtonStyle" />
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hitung"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:gravity="center"
-        android:text="@string/result"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+            <Button
+                android:id="@+id/btn_trapesium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/trapesium"
+                android:visibility="gone"
+                tools:ignore="ButtonStyle" />
 
-    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-        android:id="@+id/edt_angka1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/angka1"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:inputType="numberDecimal"
-        android:lines="1" />
+            <Button
+                android:id="@+id/btn_jajargenjang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/jajar_genjang"
+                android:visibility="gone"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
-        app:lottie_autoPlay="true"
-        app:lottie_fileName="jumbo.json"
-        app:lottie_imageAssetsFolder="images"
-        app:lottie_loop="true" />
+        <TextView
+            android:id="@+id/angka1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:text="@string/angka_1" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/angka2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_angka1"
+            android:text="@string/angka_2" />
+
+        <TextView
+            android:id="@+id/angka3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_angka2"
+            android:text="@string/angka_3" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hitung"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:text="@string/result"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/edt_angka1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/angka1"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:inputType="numberDecimal"
+            android:lines="1" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="jumbo.json"
+            app:lottie_imageAssetsFolder="images"
+            app:lottie_loop="true" />
+
+    </RelativeLayout>
+
+</ScrollView>

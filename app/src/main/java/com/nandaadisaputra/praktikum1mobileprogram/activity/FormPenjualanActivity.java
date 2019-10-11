@@ -42,10 +42,26 @@ public class FormPenjualanActivity extends AppCompatActivity implements View.OnC
         ButterKnife.bind(this);
 
         formPenjualanViewModel = new FormPenjualanViewModel(new FormPenjualanViewModel());
-        btnHasil.setOnClickListener(this);
-        btnHasil2.setOnClickListener(this);
-    }
+        btnHasil.setOnClickListener(v -> {
+            double jumlahbarang, hargasatuan, hasil;
+            jumlahbarang = Double.valueOf(edtJumlahbarang.getText().toString().trim());
+            hargasatuan = Double.valueOf(edtHargasatuan.getText().toString().trim());
 
+            hasil = jumlahbarang * hargasatuan;
+            String hasil1 = String.valueOf(hasil);
+            btnTotal.setText(hasil1);
+        });
+        btnHasil2.setOnClickListener(v -> {
+            double bayar, totalharga1, hasil2;
+            totalharga1 = Double.valueOf(btnTotal.getText().toString().trim());
+            bayar = Double.valueOf(edtBayar.getText().toString().trim());
+
+
+            hasil2 = bayar - totalharga1;
+            String hasil3 = String.valueOf(hasil2);
+            edtKembalian.setText(hasil3);
+        });
+    }
     @Override
     public void onClick(View v) {
         String a = edtJumlahbarang.getText().toString().trim();
@@ -69,7 +85,6 @@ public class FormPenjualanActivity extends AppCompatActivity implements View.OnC
             }
         }
     }
-
     void visible() {
         btnHasil.setVisibility(View.VISIBLE);
         btnHasil2.setVisibility(View.VISIBLE);

@@ -1,15 +1,19 @@
 package com.nandaadisaputra.praktikum1mobileprogram.bangundatar.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.nandaadisaputra.praktikum1mobileprogram.R;
+import com.nandaadisaputra.praktikum1mobileprogram.activity.MainActivity;
 import com.nandaadisaputra.praktikum1mobileprogram.bangundatar.model.BangunDatarModel;
 import com.nandaadisaputra.praktikum1mobileprogram.bangundatar.viewmodel.BangunDatarViewModel;
 
@@ -18,7 +22,7 @@ import butterknife.ButterKnife;
 
 public class BangunDatarActivity extends AppCompatActivity implements View.OnClickListener {
 
-@BindView(R.id.edt_angka1)
+    @BindView(R.id.edt_angka1)
     EditText edtAngka1;
     @BindView(R.id.edt_angka2)
     EditText edtAngka2;
@@ -36,6 +40,18 @@ public class BangunDatarActivity extends AppCompatActivity implements View.OnCli
     Button btnJajargenjang;
     @BindView(R.id.tv_result)
     TextView tvResult;
+    @BindView(R.id.hitung)
+    LinearLayout hitung;
+    @BindView(R.id.angka1)
+    TextView angka1;
+    @BindView(R.id.angka2)
+    TextView angka2;
+    @BindView(R.id.angka3)
+    TextView angka3;
+    @BindView(R.id.image)
+    LottieAnimationView image;
+    @BindView(R.id.backbangundatar)
+    TextView backbangundatar;
     private BangunDatarViewModel bangunDatarViewModel;
 
     @Override
@@ -43,6 +59,12 @@ public class BangunDatarActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bangun_datar);
         ButterKnife.bind(this);
+
+        backbangundatar.setOnClickListener(v -> {
+            Intent back = new Intent(BangunDatarActivity.this, MainActivity.class);
+            startActivity(back);
+
+        });
 
         bangunDatarViewModel = new BangunDatarViewModel(new BangunDatarModel());
         btnSave.setOnClickListener(this);

@@ -1,48 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/_14sdp"
     tools:context=".activity.IfElseActivity">
 
-    <TextView
-        android:id="@+id/nilaiAkhir"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/blue"
-        android:text="@string/nilai_hasil_akhir" />
+        android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
-        android:id="@+id/angkaNilaiAkhir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/masukkan_angka_nilai_akhir"
-        android:textSize="@dimen/_14sdp"
-        android:padding="@dimen/_16sdp"
-        android:layout_marginTop="@dimen/_14sdp"/>
-
-    <Button
-        android:id="@id/hasilNilaiAkhir"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hasil_nilai_akhir"
-        android:background="@drawable/button_circle"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_14ssp"
-        android:layout_below="@id/angkaNilaiAkhir"/>
-
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16sdp"
-        android:layout_below="@+id/hasilNilaiAkhir"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:gravity="center"
-        android:textColor="@color/blue"
-        android:text="@string/result"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-</RelativeLayout>
+        <Button
+            android:id="@+id/btn_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button"
+            android:text="Button"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_14ssp" />
+    </LinearLayout>
+</ScrollView>

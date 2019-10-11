@@ -15,6 +15,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nandaadisaputra.praktikum1mobileprogram.R;
+import com.nandaadisaputra.praktikum1mobileprogram.activity.MainActivity;
 import com.nandaadisaputra.praktikum1mobileprogram.crud.database.BiodataHelper;
 import com.nandaadisaputra.praktikum1mobileprogram.crud.entity.Biodata;
 
@@ -70,6 +71,11 @@ public class BiodataAddUpdateActivity extends AppCompatActivity implements View.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_biodata_add_update);
         ButterKnife.bind(this);
+
+        btnBack.setOnClickListener(v -> {
+            Intent back = new Intent(BiodataAddUpdateActivity.this, MainActivity.class);
+            startActivity(back);
+        });
 
 
         biodataHelper = BiodataHelper.getInstance(getApplicationContext());

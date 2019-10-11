@@ -32,6 +32,6 @@
         app:fabSize="normal"
         app:layout_anchor="@id/rv_biodatas"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@drawable/ic_person_black_24dp"
+        app:srcCompat="@drawable/ic_add_black_24dp"
         tools:ignore="VectorDrawableCompat" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
