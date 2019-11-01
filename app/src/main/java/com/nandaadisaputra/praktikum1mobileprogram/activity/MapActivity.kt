@@ -37,14 +37,13 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     }
 
-    @SuppressLint("MissingPermission")
     private fun getCurrentLocation() {
         // GET MY CURRENT LOCATION
         val mFusedLocation = LocationServices.getFusedLocationProviderClient(this)
         mFusedLocation.lastLocation.addOnSuccessListener(this, object : OnSuccessListener<Location> {
             override fun onSuccess(location: Location?) {
                 // In some rare condition it would be null
-                if(location != null){
+                if (location != null) {
                     // Do it all with location
                     Log.d("My Current location", "Lat : ${location?.latitude} Long : ${location?.longitude}")
                     // Display in Toast
@@ -53,12 +52,14 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                             Toast.LENGTH_LONG).show()
 
                     val myLocation = LatLng(location.latitude, location.longitude)
+                    val pasarbangetayu = LatLng(-6.9823882, 110.475511)
+                    val kantorkelurahan = LatLng(-7.0457897, 110.4297084)
                     val geoCoder = Geocoder(this@MapActivity, Locale.getDefault())
 
                     try {
-                        val listAddress : List<Address> = geoCoder.getFromLocation(location.latitude, location.longitude, 1)
-                        if(listAddress.size > 0){
-                            val placeAddress= listAddress.get(0).getAddressLine(0)
+                        val listAddress: List<Address> = geoCoder.getFromLocation(location.latitude, location.longitude, 1)
+                        if (listAddress.size > 0) {
+                            val placeAddress = listAddress.get(0).getAddressLine(0)
                             val placeName = listAddress.get(0).featureName
                             Log.d("location me", "${listAddress.get(0).featureName} ${listAddress.get(0).adminArea} ${listAddress.get(0).subLocality} ${listAddress.get(0).locale}")
 
@@ -66,15 +67,26 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
                         }
 
-                    }catch (e: IOException){
+                    } catch (e: IOException) {
                         e.printStackTrace()
                     }
 
-                    mMap.addMarker(MarkerOptions().position(myLocation).title("My Location"))
+                    mMap.addMarker(MarkerOptions().position(myLocation).title("Saya di USM"))
                     //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 12f))
                     val cu = CameraUpdateFactory.newLatLngZoom(myLocation, 16f)
                     // Animate Camera
                     mMap.animateCamera(cu)
+                    mMap.addMarker(MarkerOptions().position(pasarbangetayu).title("Saya di Pasar Bangetayu"))
+                    //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 12f))
+                    val pasar = CameraUpdateFactory.newLatLngZoom(pasarbangetayu, 16f)
+                    // Animate Camera
+                    mMap.animateCamera(pasar)
+
+                    mMap.addMarker(MarkerOptions().position(kantorkelurahan).title("Saya di Kantor Kelurahan"))
+                    //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation, 12f))
+                    val kantor = CameraUpdateFactory.newLatLngZoom(kantorkelurahan, 16f)
+                    // Animate Camera
+                    mMap.animateCamera(kantor)
                 }
             }
 
@@ -106,6 +118,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
         }
     }
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         // Forward results to EasyPermissions
