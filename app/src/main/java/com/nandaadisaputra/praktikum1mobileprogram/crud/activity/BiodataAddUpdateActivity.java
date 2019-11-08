@@ -73,8 +73,8 @@ public class BiodataAddUpdateActivity extends AppCompatActivity implements View.
         ButterKnife.bind(this);
 
         btnBack.setOnClickListener(v -> {
-            Intent back = new Intent(BiodataAddUpdateActivity.this, MainActivity.class);
-            startActivity(back);
+            super.onBackPressed();
+            finish();
         });
 
 

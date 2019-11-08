@@ -46,7 +46,7 @@ public class BiodataActivity extends AppCompatActivity implements LoadBiodatasCa
         ButterKnife.bind(this);
 
         if (getSupportActionBar() != null)
-            getSupportActionBar().setTitle("Biodatas");
+            getSupportActionBar().setTitle("Biodata Mahasiswa USM");
 
         rvBiodatas.setLayoutManager(new LinearLayoutManager(this));
         rvBiodatas.setHasFixedSize(true);
